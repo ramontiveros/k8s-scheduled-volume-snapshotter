@@ -92,7 +92,7 @@ def create_new_snapshot(scheduled_snapshot):
             'labels': new_snapshot_labels
         },
         'spec': {
-            'snapshotClassName': scheduled_snapshot.get('spec', {}).get('snapshotClassName'),
+            'volumeSnapshotClassName': scheduled_snapshot.get('spec', {}).get('snapshotClassName'),
         }
     }
     if VS_CRD_VERSION == 'v1alpha1':
